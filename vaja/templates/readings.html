@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head %}
+    <link href="/static/css/uikit.gradient.css" rel='stylesheet' type='text/css' />
+{% endblock %}
+
+{% block content %}
+    <table class="uk-table">
+        <tr>
+            <th>time</th>
+            <th>CO2</th>
+            <th>NO2</th>
+            <th>O3</th>
+            <th>humidity</th>
+            <th>temperature</th>
+            <th>movement</th>
+        </tr>
+        {% for reading in readings %}
+        <tr class="selectable-tr">
+            <td>{{ reading.time }}</td>
+            <td>{{ reading.CO }}</td>
+            <td>{{ reading.NO2 }}</td>
+            <td>{{ reading.O3 }}</td>
+            <td>{{ reading.humidity }}</td>
+            <td>{{ reading.temp }}</td>
+            <td>{{ reading.movement }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</table>
+{% endblock %}

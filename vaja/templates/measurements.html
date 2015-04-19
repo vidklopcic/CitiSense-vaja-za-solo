@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link href="/static/css/uikit.gradient.css" rel='stylesheet' type='text/css' />
+{% endblock %}
+{% load vaja_extras %}
+{% block content %}
+    <table class="uk-table selectable-uk-table">
+        <tr>
+            <th>name</th>
+            <th>last update</th>
+        </tr>
+        {% for measurements in measurementss %}
+        <tr class="selectable-tr" onclick="location.href = '/measurements/{{ measurements }}';">
+            <td>{{ measurements }}</td>
+            <td>{{ last_update|key:measurements }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

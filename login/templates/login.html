@@ -1,0 +1,37 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>App Loction Form Responsive Widget Template  :: w3layouts</title>
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="App Loction Form,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements"./>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+		<div class="app-location">
+			<h1>Login</h1>
+			<div class="line"><span></span></div>
+			<div class="location"><img src="/static/images/location.png" class="img-responsive" alt="" /></div>
+			<form action="/login/redirect{{ redirect_url }}" method="POST">
+                {% csrf_token %}
+				<input type="text" class="text" name="username" value="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}" >
+				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+				<div class="submit"><input type="submit" value="Sign in" ></div>
+				<div class="clear"></div>
+				<div class="new">
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+</body>
+</html>
